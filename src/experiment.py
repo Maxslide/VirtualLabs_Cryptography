@@ -11,31 +11,31 @@ def introduction():
 
 
 @app.route('/Theory')
-def introduction():
+def Theory():
     return render_template('Theory.html')
 
 @app.route('/Objective')
-def introduction():
+def Objective():
     return render_template('Objective.html')
 
 @app.route('/Experiment')
-def introduction():
+def Experiment():
     return render_template('Experiment.html')
 
 @app.route('/Manual')
-def introduction():
+def Manual():
     return render_template('Manual.html')
 
 @app.route('/Quizzes')
-def introduction():
+def Quizzes():
     return render_template('Quizzes.html')
 
 @app.route('/Procedure')
-def introduction():
+def Procedure():
     return render_template('Procedure.html')
 
 @app.route('/Further_Reading')
-def introduction():
+def Further_Reading():
     return render_template('Further_Reading.html')
 
 if __name__ == "__main__":
