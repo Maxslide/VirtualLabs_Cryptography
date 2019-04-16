@@ -117,42 +117,65 @@
 				<div class="row">
 					<div class="col-md-2 sidebar-col-2">
 						<!--edit1-->
-						<a href="/Introduction" class="sidebar-a" >
+						<a href="/Introduction" class="sidebar-a">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;">Introduction</h3>
 						</a>
-						<a href="/Theory" class="sidebar-a" >
+						<a href="/Theory" class="sidebar-a">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;">Theory</h3>
 						</a>
-						<a href="/Objective" class="sidebar-a" >
+						<a href="/Objective" class="sidebar-a">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;">Objective</h3>
 						</a>
-						<a href="/Experiment" class="sidebar-a" >
+						<a href="/Experiment" class="sidebar-a">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;">Experiment</h3>
 						</a>
-						<a href="/Manual" class="sidebar-a" >
+						<a href="/Manual" class="sidebar-a">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;">Manual</h3>
 						</a>
-						<a href="/Quizzes" class="sidebar-a" >
+						<a href="/Quizzes" class="sidebar-a">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;">Quizzes</h3>
 						</a>
-						<a href="/Procedure" class="sidebar-a" >
+						<a href="/Procedure" class="sidebar-a">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;">Procedure</h3>
 						</a>
-						<a href="/Further_Reading" class="sidebar-a" >
+						<a href="/Further_Reading" class="sidebar-a">
 							<h3 class="text-h3-darkblue" style="margin-top: 2px;">Further Reading</h3>
 						</a>
 					</div>
-				
+
 
 					<div class="col-md-10 lab-list-col-10">
 						<!--edit -->
 						<h1 class="text-h2-lightblue">Cryptographic Hash Functions and Applications(HMAC)</h1>
 						<div class="content" id="experiment-article-section-1-content">
-							<h3>Introduction</h3>
-							<p>SHA-1 is a popular heuristic hash function that is currently in vogue. In this
-								experiment, we shall familiarize ourselves with SHA-1 as well as look at one important
-								applaication of hashing, namely, the HMAC algorithm which is currently used in the
-								Internet to achieve data integrity </p>
+							<h3>Quiz</h3>
+							<h4>
+								<ol>
+									{% for i in Ques %}
+									<li>
+										{{i['Q']}}
+										<br>
+										<input type="radio" value="{{ i['o1'] }}" name="{{ i['Q'] }}" />{{ i['o1'] }}
+										<br>
+										<input type="radio" value="{{ i['o2'] }}" name="{{ i['Q'] }}" />{{ i['o2'] }}
+										<br>
+										<input type="radio" value="{{ i['o3'] }}" name="{{ i['Q'] }}" />{{ i['o3'] }}
+										<br>
+										<input type="radio" value="{{ i['o4'] }}" name="{{ i['Q'] }}" />{{ i['o4'] }}
+										<br>
+									</li>
+									<br><br>
+									{% endfor %}
+								</ol>
+							</h4>
+							<input type="submit" value="submit" onclick="submit2()" />
+							<div id="answer" style="visibility:hidden">
+								<ol>
+									{% for i in Ques %}
+									<li>Ans: {{i['ans']}}</li>
+									{% endfor %}
+								</ol>
+							</div>
 
 						</div>
 					</div>
@@ -236,6 +259,11 @@
 
 <!-- Include js plugin -->
 <script src="../../../vendors/owl-carousel/owl.carousel.js"></script>
+<script>
+	function submit2() {
+		document.getElementById("answer").style.visibility = "visible";
+	}
+</script>
 
 <script type="text/javascript">
 	$(document).ready(function () {
