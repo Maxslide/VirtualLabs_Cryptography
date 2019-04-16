@@ -53,7 +53,7 @@
 			                    <span class="icon-bar" style="background-color: #77BB41"></span>
 			                    <span class="icon-bar" style="background-color: #77BB41"></span>
 			                </button>
-			                <a class="navbar-brand main-logo-a" href="http://vlabs.ac.in/index.html"><img src="static/images/logo-new.png" alt="logo" class="img-responsive main-logo" /></a>
+			                <a class="navbar-brand main-logo-a" href="http://vlabs.ac.in"><img src="static/images/logo-new.png" alt="logo" class="img-responsive main-logo" /></a>
 			            </div>			
 			                        
 			            <!-- Collect the nav links, forms, and other content for toggling -->
@@ -90,6 +90,20 @@
 	        <!-- /.container-fluid -->
 	    </nav>
 	</header>
+	<!--include all js scripts required for the experiment to be carried out-->
+	<script src="static/js/jsreqexp/base64.js"></script>
+	<script src="static/js/jsreqexp/hmac.js"></script>
+	<script src="static/js/jsreqexp/jsbn.js"></script>
+	<script src="static/js/jsreqexp/jsbn2.js"></script>
+	<script src="static/js/jsreqexp/prng4.js"></script>
+	<script src="static/js/jsreqexp/rng.js"></script>
+	<script src="static/js/jsreqexp/rsa-dss.js"></script>
+	<script src="static/js/jsreqexp/rsa.js"></script>
+	<script src="static/js/jsreqexp/rsa2.js"></script>
+	<script src="static/js/jsreqexp/sha1.js"></script>
+
+
+
 
 	<div id="content">
 			<div class="container-fluid" >
@@ -101,8 +115,12 @@
 			
 			<!-- =================================================================================================================================== -->
 			<div class="container-fluid"  style="margin-left: 35px; margin-right: 35px;">
-				<h2 class="text-h2-lightblue" style=" margin-bottom: 20px; margin-top: 10px; "><a href="http://vlabs.ac.in/computer-science-and-engineering-labs.html" class="sidebar-a" >Computer Science & Engineering</a> &rarr;<a href="../Introduction.html" class="sidebar-a" >Cryptography Lab</a>&nbsp&rarr;<a href="../Experiments.html" class="sidebar-a" >List Of Experiments</a><br/></h2>
-					
+				<h2 class="text-h2-lightblue" style=" margin-bottom: 20px; margin-top: 10px; ">
+					<a href="/Introduction" class="sidebar-a" >Cryptography Lab</a>&rarr;
+					<a href="/Introduction" class="sidebar-a" >Cryptographic Hashing</a>&nbsp&rarr;
+					<a href="/Experiment" class="sidebar-a" >Experiment</a><br/>
+				</h2>
+
 					<div class="row">
 						<div class="col-md-2 sidebar-col-2">
 						<!--edit1-->
@@ -147,7 +165,7 @@
 									<input type="text" id="input" name="user_input" value="test" size="40">
 								</p>
 								<p>
-									<input type= "button" value="SHA-1">
+									<input onclick="document.getElementById('hash_value').value = hex_sha1(document.getElementById('input').value)" type= "button" value="SHA-1">
 								</p>
 								<br>
 								<p>
@@ -159,10 +177,29 @@
 								</p>
 								<br><br>
 								<p><center><b><u>HMAC Construction using a "Dummy" Hash Function</u></b></center></p>
+								<br>
+<h2>HMAC construction</h2>
+<!-- Disoriented because use of pre tag to get a good visual output of the form required for this experiment-->
+<pre>
+	Plaintext: <textarea cols="50" id="plaintext" name="plaintext" rows="4">1100000000111100101010</textarea>   <input name="changePlainText" onclick="next_plain_text()" type="button" value="Next Plaintext"> <br>
+			length of Initialization Vector (IV), l, <textarea cols="4" id="l" name="l" rows="1">8</textarea> <br>
+	IV: <textarea cols="50" id="iv" name="iv" rows="1">11001100</textarea>   <input name="changeIV" onclick="next_IV()" type="button" value="Next IV"><br><br><br>
+	Key, k: <textarea cols="50" id="key" name="key" rows="1">10000101</textarea>   <input name="changeKey" onclick="next_Key()" type="button" value="Next Key"><br><br><br>
+	ipad: 0x5C (01011100)
+	opad: 0x36 (00110110) <br>
+	Put your text of size 2l to get the corresponding value of hash of size l.<br>
+	Your text: <textarea cols="50" id="usertext" name="usertext" rows="1">11001010</textarea>   <input name="getHash" onclick="get_hash()" type="button" value="get hash">
+	Hashed value: <textarea cols="50" id="hashvalue" name="hashvalue" readonly="readonly" rows="1">0011</textarea><br><br>
+	Final Output: <textarea cols="50" id="cipherarea" name="output" rows="1"></textarea>  <input name="checkAnswer" onclick="checkAnswer()" type="button" value="Check Answer!">
+<div id="notification" style="width: 300px; height: 10px; padding-top: 20px;"></div>
+<br>
+<br>
+</pre>
 							</div>	
 						</div>	
 					</div>		
 	</div>
+
 <!-- =================================================================================================================================== -->
 
 
@@ -192,13 +229,13 @@
 					<a class="text-a-lightgreen" style="text-decoration: underline; font-size: 1.0em;" href="mailto:support@vlab.co.in">support@vlabs.ac.in</a>
 				</div>
 				<div>
-					<a href="http://118.102.191.38/feedback/feedback.html" class="text-a-lightgreen" style="text-decoration: underline;" > Feedback</a>
+					<a href="http://209.211.220.205/feedback/feedback.html" class="text-a-lightgreen" style="text-decoration: underline;" > Feedback</a>
 				</div>
 			</div>
 			
 			<div class="col-md-2 border-right-green-dotted" >
 				<h2 class="text-h2-lightblue-small" style="font-weight: bold;margin-top: 0px;"> Follow us</h2>
-				<a href="https://www.facebook.com/pages/Virtual-Labs-IIT-Delhi/301510159983871" class="text-a-lightgreen nounderline"   target="_blank"> <img src="static/images/fb.png"  alt="facebook" style="border-radius: 50%;"/>
+				<a href="https://www.facebook.com/pages/category/Educational-Research-Center/Virtual-Labs-IIIT-Hyderabad-431904034218033/" class="text-a-lightgreen nounderline"   target="_blank"> <img src="static/images/fb.png"  alt="facebook" style="border-radius: 50%;"/>
 				</a>
 				<a href="https://twitter.com/TheVirtualLabs" class="text-a-lightgreen nounderline"   target="_blank"> <img src="static/images/twitter.png"  alt="twitter" style="border-radius: 50%;"/>
 				</a>
@@ -215,16 +252,16 @@
 
 
 	<!-- jQuery -->
-    <script src="../../../js/jquery.js"></script>
+    <script src="static/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
 
 	<!-- Custom Theme JavaScript -->
-    <script src="../../../js/custom.js"></script>
+    <script src="static/js/custom.js"></script>
     
     <!-- Include js plugin -->
-	<script src="../../../vendors/owl-carousel/owl.carousel.js"></script>
+	<script src="../vendors/owl-carousel/owl.carousel.js"></script>
 	
 	<script type="text/javascript">
 	$(document).ready(function() {
