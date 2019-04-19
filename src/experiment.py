@@ -1,3 +1,5 @@
+#docstring, Sphinx, Epydoc, MkDocs, pycco
+#pip install pydocstring
 from flask import Flask, render_template, jsonify, json
 from flask_sqlalchemy import SQLAlchemy
 from random import shuffle
@@ -7,30 +9,37 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(app)
 @app.route('/')
 def index():
-    return render_template("index.html") #Called when the web app is just opened
+    """is called when the web app is just opened"""
+    return render_template("index.html")
 
 @app.route('/Introduction')
 def introduction():
-    return render_template('Introduction.html') # Renders the Introduction page
+    """Renders the Introduction page"""
+    return render_template('Introduction.html')
 
 @app.route('/Theory')
 def Theory():
-    return render_template('Theory.html') # Renders the Theory page
+    """Renders the Theory page"""
+    return render_template('Theory.html') 
 
 @app.route('/Objective')
 def Objective():
-    return render_template('Objective.html') # Renders the Objective page
+    """Renders the Objective page"""
+    return render_template('Objective.html')
 
 @app.route('/Experiment')
 def Experiment():
-    return render_template('Experiment.html') # Renders the Exepriment page
+    """Renders the Exepriment page"""
+    return render_template('Experiment.html')
 
 @app.route('/Manual')
 def Manual():
-    return render_template('Manual.html') # Renders the Manual page
+    """Renders the Manual page"""
+    return render_template('Manual.html')
 
 @app.route('/Quizzes') #renders the Quizzes page along with displaying the content of the database created
 def Quizzes():
+    """creates and stores the database"""
     db.drop_all()
     createDB() # Creates the database
     a = showDB() # Stores the database in a variable, in the form of a list
@@ -39,11 +48,13 @@ def Quizzes():
 
 @app.route('/Procedure')
 def Procedure():
+    """Renders the  procedure page"""
     return render_template('Procedure.html') # Renders the procedure page
 
 @app.route('/Further_Reading')
 def Further_Reading():
-    return render_template('Further_Reading.html') # Renders the Procedure page
+    """Renders the Further Readings page"""
+    return render_template('Further_Reading.html') # Renders the Further Readings page
 
 #Q to be added to the database stored in the list form [Q,op1,op2,op3,op4,ans].
 
@@ -109,6 +120,7 @@ class Quiz(db.Model): # Defines the databse columns
 
 
 def createDB(): # Creates the database with the given definition
+    """Creates the database with the given definition"""
     db.create_all()
     for i in Question:
         new_ent = Quiz(Ques = i[0], Opt1 = i[1], Opt2 = i[2], Opt3 = i[3], Opt4 = i[4], ans = i[5])
@@ -117,7 +129,8 @@ def createDB(): # Creates the database with the given definition
     return
 
 
-def showDB(): # returns the content of the database in a list form
+def showDB(): 
+    """returns the content of the database in a list form"""
     ent = Quiz.query.all()
     a = []
     for i in ent:
@@ -135,21 +148,16 @@ def showDB(): # returns the content of the database in a list form
 if __name__ == "__main__":
     app.run(debug=True)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#to implement docstring to retrieve documentation into an exterior file.
+#can be done catenating the python execution into another text file.
+# print(index.__doc__)
+# print(introduction.__doc__)
+# print(Theory.__doc__)
+# print(Objective.__doc__)
+# print(Experiment.__doc__)
+# print(Manual.__doc__)
+# print(Quizzes.__doc__)
+# print(Procedure.__doc__)
+# print(Further_Reading.__doc__)
+# print(createDB.__doc__)
+# print(showDB.__doc__)
