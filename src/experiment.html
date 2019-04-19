@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module experiment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>experiment</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/mangale/vlabsassign/VirtualLabs_Cryptography/src/experiment.py">/Users/mangale/vlabsassign/VirtualLabs_Cryptography/src/experiment.py</a></font></td></tr></table>
+    <p><tt>#docstring,&nbsp;Sphinx,&nbsp;Epydoc,&nbsp;MkDocs,&nbsp;pycco<br>
+#pip&nbsp;install&nbsp;pydocstring</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="flask.json.html">flask.json</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial">sqlalchemy.ext.declarative.api.Model(<a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="experiment.html#Quiz">Quiz</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Quiz">class <strong>Quiz</strong></a>(sqlalchemy.ext.declarative.api.Model)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Quiz">Quiz</a>(**kwargs)<br>
+&nbsp;<br>
+Base&nbsp;class&nbsp;for&nbsp;SQLAlchemy&nbsp;declarative&nbsp;base&nbsp;model.<br>
+&nbsp;<br>
+To&nbsp;define&nbsp;models,&nbsp;subclass&nbsp;:attr:`db.Model&nbsp;&lt;SQLAlchemy.Model&gt;`,&nbsp;not&nbsp;this<br>
+class.&nbsp;To&nbsp;customize&nbsp;``db.Model``,&nbsp;subclass&nbsp;this&nbsp;and&nbsp;pass&nbsp;it&nbsp;as<br>
+``model_class``&nbsp;to&nbsp;:class:`SQLAlchemy`.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="experiment.html#Quiz">Quiz</a></dd>
+<dd>sqlalchemy.ext.declarative.api.Model</dd>
+<dd><a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Quiz-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><tt>A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>Opt1</strong></dt>
+</dl>
+<dl><dt><strong>Opt2</strong></dt>
+</dl>
+<dl><dt><strong>Opt3</strong></dt>
+</dl>
+<dl><dt><strong>Opt4</strong></dt>
+</dl>
+<dl><dt><strong>Ques</strong></dt>
+</dl>
+<dl><dt><strong>ans</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x10b927b70; Quiz&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('quiz', MetaData(bind=None), Column('id', ...500), table=&lt;quiz&gt;, nullable=False), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'quiz'</dl>
+
+<hr>
+Data and other attributes inherited from sqlalchemy.ext.declarative.api.Model:<br>
+<dl><dt><strong>metadata</strong> = MetaData(bind=None)</dl>
+
+<dl><dt><strong>query</strong> = &lt;flask_sqlalchemy.BaseQuery object&gt;</dl>
+
+<dl><dt><strong>query_class</strong> = &lt;class 'flask_sqlalchemy.BaseQuery'&gt;<dd><tt>SQLAlchemy&nbsp;:class:`~sqlalchemy.orm.query.Query`&nbsp;subclass&nbsp;with&nbsp;convenience&nbsp;methods&nbsp;for&nbsp;querying&nbsp;in&nbsp;a&nbsp;web&nbsp;application.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;the&nbsp;default&nbsp;:attr:`~Model.query`&nbsp;object&nbsp;used&nbsp;for&nbsp;models,&nbsp;and&nbsp;exposed&nbsp;as&nbsp;:attr:`~SQLAlchemy.Query`.<br>
+Override&nbsp;the&nbsp;query&nbsp;class&nbsp;for&nbsp;an&nbsp;individual&nbsp;model&nbsp;by&nbsp;subclassing&nbsp;this&nbsp;and&nbsp;setting&nbsp;:attr:`~Model.query_class`.</tt></dl>
+
+<hr>
+Methods inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
+<dl><dt><a name="Quiz-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
+<dl><dt><strong>__weakref__</strong> = &lt;weakref at 0x10cadcd18; to 'DefaultMeta' at 0x7f80b35ea508 (Quiz)&gt;</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-Experiment"><strong>Experiment</strong></a>()</dt><dd><tt>Renders&nbsp;the&nbsp;Exepriment&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-Further_Reading"><strong>Further_Reading</strong></a>()</dt><dd><tt>Renders&nbsp;the&nbsp;Further&nbsp;Readings&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-Manual"><strong>Manual</strong></a>()</dt><dd><tt>Renders&nbsp;the&nbsp;Manual&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-Objective"><strong>Objective</strong></a>()</dt><dd><tt>Renders&nbsp;the&nbsp;Objective&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-Procedure"><strong>Procedure</strong></a>()</dt><dd><tt>Renders&nbsp;the&nbsp;&nbsp;procedure&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-Quizzes"><strong>Quizzes</strong></a>()</dt><dd><tt>creates&nbsp;and&nbsp;stores&nbsp;the&nbsp;database</tt></dd></dl>
+ <dl><dt><a name="-Theory"><strong>Theory</strong></a>()</dt><dd><tt>Renders&nbsp;the&nbsp;Theory&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-createDB"><strong>createDB</strong></a>()</dt><dd><tt>Creates&nbsp;the&nbsp;database&nbsp;with&nbsp;the&nbsp;given&nbsp;definition</tt></dd></dl>
+ <dl><dt><a name="-index"><strong>index</strong></a>()</dt><dd><tt>is&nbsp;called&nbsp;when&nbsp;the&nbsp;web&nbsp;app&nbsp;is&nbsp;just&nbsp;opened</tt></dd></dl>
+ <dl><dt><a name="-introduction"><strong>introduction</strong></a>()</dt><dd><tt>Renders&nbsp;the&nbsp;Introduction&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-showDB"><strong>showDB</strong></a>()</dt><dd><tt>returns&nbsp;the&nbsp;content&nbsp;of&nbsp;the&nbsp;database&nbsp;in&nbsp;a&nbsp;list&nbsp;form</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Question</strong> = [['Which criterion ensures that we can’t find two messages that hash to the same digest?', 'One-wayness', 'Weak-collision-resistance', 'Strong-collision-resistance', 'None', 'Weak-collision-resistance'], ['Which criterion Ensures that it must be extremel...reate the message if the message digest is given.', 'One-wayness', 'Weak-collision-resistance', 'Strong-collision resistance', 'None', 'One-wayness'], ['Consider the function h: {0,1}8 -&gt; {0,1}4. Suppo...16, x in [0, 255]. The collision in h occurs for.', '(1, 17)', '(2, 16)', '(1, 16)', '(2, 17)', '(1, 17)'], ['The Merkle-Damgard Transform is mainly useful for', 'Converting any fixed-length collision resistant ...rbitrary length collision resistant hash function', 'Converting arbitrary length hash function to a fixed length hash function', 'Constructing hash function from random function', 'None', 'Converting arbitrary length hash function to a fixed length hash function'], ['Q5', '51', '52', '53', '54', '52'], ['Q6', '61', '62', '63', '64', '63'], ['Q7', '71', '72', '73', '74', '74'], ['Q8', '81', '82', '83', '84', '82']]<br>
+<strong>app</strong> = &lt;Flask 'experiment'&gt;<br>
+<strong>db</strong> = &lt;SQLAlchemy engine=sqlite:////tmp/test.db&gt;</td></tr></table>
+</body></html>

@@ -1,0 +1,27 @@
+ * Serving Flask app "experiment" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+Called when the web app is just opened
+Renders the Introduction page
+Renders the Theory page
+Renders the Objective page
+Renders the Exepriment page
+Renders the Manual page
+creates and stores the database
+Renders the  procedure page
+Renders the Further Readings page
+Creates the database with the given definition
+returns the content of the database in a list form
+Called when the web app is just opened
+Renders the Introduction page
+Renders the Theory page
+Renders the Objective page
+Renders the Exepriment page
+Renders the Manual page
+creates and stores the database
+Renders the  procedure page
+Renders the Further Readings page
+Creates the database with the given definition
+returns the content of the database in a list form

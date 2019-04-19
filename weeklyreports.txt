@@ -1,0 +1,15 @@
+
+WEEK 1:
+Created the basic structure.
+Created basic template for js and html.
+Referred the code from the repo and cleaned it.
+Added images and corrected links.
+Basically most of the front end.
+Added Readme.txt .
+
+WEEK 2:
+Implemented flask.
+Completed Quiz implementation with database.
+Completed Experiments.
+Documented code for better code understanding.
+Improved Readme.txt to get a better understanding of the repo.
