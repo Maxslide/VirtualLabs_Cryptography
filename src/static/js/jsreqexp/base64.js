@@ -1,15 +1,8 @@
 var b64map="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 var b64pad="=";
 
-//convert int to hex-------hex()
-//convert hex to int-------int(s,16)
-//convert bin to int-------int(s,2)
-/*convert int to bin-------
-    def decimalToBinary(n): 
-      return bin(n).replace("0b","") 
-*/
 
-
+//hex2b64(h) converts the given hexadecimal number (h) and converts it to int_64 type and returns it
 
 function hex2b64(h) {
   var i;

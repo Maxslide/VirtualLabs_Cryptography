@@ -54,7 +54,6 @@ function rng_get_byte() {
     rng_pptr = 0;
     //rng_pool = null;
   }
-  // TODO: allow reseeding after first request
   return rng_state.next();
 }
 

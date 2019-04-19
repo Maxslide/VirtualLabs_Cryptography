@@ -7,6 +7,7 @@ function parseBigInt(str,r) {
   return new BigInteger(str,r);
 }
 
+//break the given string into lines of length n
 function linebrk(s,n) {
   var ret = "";
   var i = 0;
@@ -17,6 +18,7 @@ function linebrk(s,n) {
   return ret + s.substring(i,s.length);
 }
 
+//convert byte to hexadecimal
 function byte2Hex(b) {
   if(b < 0x10)
     return "0" + b.toString(16);

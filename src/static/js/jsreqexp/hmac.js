@@ -1,25 +1,37 @@
+
+//to trim the str(parameter),i.e., remove all whitespaces and return it
 function trim(str) {
     return str.replace(/\s+/g,"");
 }
 
+//intitialize the length of the IV to 8
 var current_l=8;
 
+
+//return the xor of the two input bits
+function XOR(a, b) {
+    if((a == b))
+        return "0";
+    else 
+        return "1";
+}
+
+
+//to input two strings and return a string which represents the bit by bit XOR value
 function xor_strings(a, b) {
+        //xor is only carried out if the two strings have the same length
         if(a.length != b.length) {
                 alert("Error calculating XOR");
                 return;
         }
         var output = "";
         for (var i=0; i<a.length; i ++) {
-                if(a[i] == b[i]) {
-                        output += "0";
-                } else {
-                        output += "1";
-                }
+                output+=XOR(a[i],b[i]);
         }
         return output;
 }
 
+//verify that the input is binary
 function validate_binary(input) {
     var len = input.length;
     var i;
@@ -34,6 +46,7 @@ function validate_binary(input) {
     return 1;
 }
 
+//to convert a decimal number to a binary number
 function get_num_in_binary(num) {
 	var num_in_binary = "";
 	while (num > 0) {
@@ -43,10 +56,12 @@ function get_num_in_binary(num) {
 	return num_in_binary;
 }
 
+// isUnsignedInteger() returns if unsigned or not
 function isUnsignedInteger(s) {
   return (s.toString().search(/^[0-9]+$/) == 0);
 }
 
+// rand_sequence() creates and returns a random sequence
 function rand_sequence(len){
     ret="";
     for(i=0; i<len; i++) {
@@ -73,10 +88,10 @@ function next_IV() {
     current_l = l; 
     document.getElementById("iv").value = rand_sequence(current_l);
 }
-
+// next_Key() creates a random sequence of length current_l given and returns it as the next key
 function next_Key() {
     var l = document.getElementById("l").value;
-    if (! isUnsignedInteger(l) ) {
+    if (!isUnsignedInteger(l)) {
 	alert("l should be a positive integer");
 	return;
     }
@@ -86,18 +101,6 @@ function next_Key() {
     }
     current_l = l; 
     document.getElementById("key").value = rand_sequence(current_l);
-}
-
-function XOR(a, b) {
-    if((a == "0" && b == "0"))
-        return "0";
-    else if((a == "0" && b == "1"))
-        return "1";
-    else if((a == "1" && b == "0"))
-        return "1";
-    else if((a == "1" && b == "1"))
-        return "0";
-    return "0";
 }
 
 function hash_function(input) {
@@ -162,6 +165,7 @@ function pad_plain_text() {
 	document.getElementById("plaintext").value = pad_input(document.getElementById("plaintext").value);
 }
 
+//checkAnswer() checks whether the answer provided by the user and the one calculated is the same
 function checkAnswer() {
 	var user_answer = document.getElementById("cipherarea").value;
 	if(user_answer.length == 0) {
